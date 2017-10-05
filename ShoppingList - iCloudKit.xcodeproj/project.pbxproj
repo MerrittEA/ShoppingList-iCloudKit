@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3A30D25AFAB3AA1150DBB0 /* Pods_ShoppingList___iCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2659E4DBDC625B21571B68E2 /* Pods_ShoppingList___iCloudKit.framework */; };
 		8D468EC01F85BAF30060A8FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EBF1F85BAF30060A8FE /* AppDelegate.swift */; };
 		8D468EC21F85BAF30060A8FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EC11F85BAF30060A8FE /* ViewController.swift */; };
 		8D468EC51F85BAF30060A8FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D468EC31F85BAF30060A8FE /* Main.storyboard */; };
 		8D468EC81F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EC61F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodeld */; };
 		8D468ECA1F85BAF30060A8FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D468EC91F85BAF30060A8FE /* Assets.xcassets */; };
 		8D468ECD1F85BAF30060A8FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D468ECB1F85BAF30060A8FE /* LaunchScreen.storyboard */; };
+		8D468ED71F85C0EB0060A8FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D468ED61F85C0EB0060A8FE /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0374CD5A1DA1ACE81B09E0D6 /* Pods-ShoppingList - iCloudKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList - iCloudKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList - iCloudKit/Pods-ShoppingList - iCloudKit.release.xcconfig"; sourceTree = "<group>"; };
+		2659E4DBDC625B21571B68E2 /* Pods_ShoppingList___iCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingList___iCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D468EBC1F85BAF30060A8FE /* ShoppingList - iCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShoppingList - iCloudKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D468EBF1F85BAF30060A8FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D468EC11F85BAF30060A8FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D468EC41F85BAF30060A8FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D468EC71F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ShoppingList___iCloudKit.xcdatamodel"; sourceTree = "<group>"; };
+		8D468EC71F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingList___iCloudKit.xcdatamodel; sourceTree = "<group>"; };
 		8D468EC91F85BAF30060A8FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D468ECC1F85BAF30060A8FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D468ECE1F85BAF30060A8FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D468ED41F85C0E90060A8FE /* ShoppingList - iCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShoppingList - iCloudKit.entitlements"; sourceTree = "<group>"; };
+		8D468ED61F85C0EB0060A8FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D94663A163AFAC3929118AA4 /* Pods-ShoppingList - iCloudKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList - iCloudKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList - iCloudKit/Pods-ShoppingList - iCloudKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D468ED71F85C0EB0060A8FE /* CloudKit.framework in Frameworks */,
+				5B3A30D25AFAB3AA1150DBB0 /* Pods_ShoppingList___iCloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				8D468EBE1F85BAF30060A8FE /* ShoppingList - iCloudKit */,
 				8D468EBD1F85BAF30060A8FE /* Products */,
+				8D468ED51F85C0EB0060A8FE /* Frameworks */,
+				BC94E37B15CC7011AE349190 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,7 @@
 		8D468EBE1F85BAF30060A8FE /* ShoppingList - iCloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				8D468ED41F85C0E90060A8FE /* ShoppingList - iCloudKit.entitlements */,
 				8D468EBF1F85BAF30060A8FE /* AppDelegate.swift */,
 				8D468EC11F85BAF30060A8FE /* ViewController.swift */,
 				8D468EC31F85BAF30060A8FE /* Main.storyboard */,
@@ -67,6 +79,24 @@
 			path = "ShoppingList - iCloudKit";
 			sourceTree = "<group>";
 		};
+		8D468ED51F85C0EB0060A8FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D468ED61F85C0EB0060A8FE /* CloudKit.framework */,
+				2659E4DBDC625B21571B68E2 /* Pods_ShoppingList___iCloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC94E37B15CC7011AE349190 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D94663A163AFAC3929118AA4 /* Pods-ShoppingList - iCloudKit.debug.xcconfig */,
+				0374CD5A1DA1ACE81B09E0D6 /* Pods-ShoppingList - iCloudKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D468ED11F85BAF30060A8FE /* Build configuration list for PBXNativeTarget "ShoppingList - iCloudKit" */;
 			buildPhases = (
+				59600638818BC8B154A0F123 /* [CP] Check Pods Manifest.lock */,
 				8D468EB81F85BAF30060A8FE /* Sources */,
 				8D468EB91F85BAF30060A8FE /* Frameworks */,
 				8D468EBA1F85BAF30060A8FE /* Resources */,
+				0E0A7546483C9251C8C25917 /* [CP] Embed Pods Frameworks */,
+				9C5B7C1307B3CF0831D81B1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +133,14 @@
 					8D468EBB1F85BAF30060A8FE = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -133,6 +174,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E0A7546483C9251C8C25917 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingList - iCloudKit/Pods-ShoppingList - iCloudKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingList - iCloudKit/Pods-ShoppingList - iCloudKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59600638818BC8B154A0F123 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShoppingList - iCloudKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C5B7C1307B3CF0831D81B1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingList - iCloudKit/Pods-ShoppingList - iCloudKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D468EB81F85BAF30060A8FE /* Sources */ = {
@@ -276,8 +371,10 @@
 		};
 		8D468ED21F85BAF30060A8FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D94663A163AFAC3929118AA4 /* Pods-ShoppingList - iCloudKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ShoppingList - iCloudKit/ShoppingList - iCloudKit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34GG8A5UL9;
 				INFOPLIST_FILE = "ShoppingList - iCloudKit/Info.plist";
@@ -291,8 +388,10 @@
 		};
 		8D468ED31F85BAF30060A8FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0374CD5A1DA1ACE81B09E0D6 /* Pods-ShoppingList - iCloudKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ShoppingList - iCloudKit/ShoppingList - iCloudKit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34GG8A5UL9;
 				INFOPLIST_FILE = "ShoppingList - iCloudKit/Info.plist";
@@ -334,7 +433,7 @@
 				8D468EC71F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodel */,
 			);
 			currentVersion = 8D468EC71F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodel */;
-			path = "ShoppingList___iCloudKit.xcdatamodeld";
+			path = ShoppingList___iCloudKit.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

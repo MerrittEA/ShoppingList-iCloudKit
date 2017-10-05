@@ -7,19 +7,48 @@
 //
 
 import UIKit
+import CloudKit
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Fetching the userer record
+        fetchUserRecordID()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    // methods
+    
+    private func fetchUserRecordID() {
+        // Fetch Default Container
+        let defaultContainer = CKContainer.default()
+        
+        // Fetch Private Database
+        
+        let privateDatabase = defaultContainer.privateCloudDatabase
+        
+        // Fetch User Record
+        defaultContainer.fetchUserRecordID(completionHandler: { (recordID, error) -> Void in
+            if let responseError = error {
+                print(responseError)
+                
+            } else if let userRecordID = recordID {
+                DispatchQueue.async(execute: DispatchQueue.main, { () -> Void in
+                    self.fetchUserRecord(userRecordID)
+                })
+            }
+        })
+    }
+    
+    private func fetchUserRecord(recordID: CKRecordID) {
+        
+    }
 }
 
