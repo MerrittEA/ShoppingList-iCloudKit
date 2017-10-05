@@ -9,27 +9,29 @@
 /* Begin PBXBuildFile section */
 		5B3A30D25AFAB3AA1150DBB0 /* Pods_ShoppingList___iCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2659E4DBDC625B21571B68E2 /* Pods_ShoppingList___iCloudKit.framework */; };
 		8D468EC01F85BAF30060A8FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EBF1F85BAF30060A8FE /* AppDelegate.swift */; };
-		8D468EC21F85BAF30060A8FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EC11F85BAF30060A8FE /* ViewController.swift */; };
+		8D468EC21F85BAF30060A8FE /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EC11F85BAF30060A8FE /* ListsViewController.swift */; };
 		8D468EC51F85BAF30060A8FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D468EC31F85BAF30060A8FE /* Main.storyboard */; };
 		8D468EC81F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EC61F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodeld */; };
 		8D468ECA1F85BAF30060A8FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D468EC91F85BAF30060A8FE /* Assets.xcassets */; };
 		8D468ECD1F85BAF30060A8FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D468ECB1F85BAF30060A8FE /* LaunchScreen.storyboard */; };
 		8D468ED71F85C0EB0060A8FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D468ED61F85C0EB0060A8FE /* CloudKit.framework */; };
+		8D468ED91F85D3BA0060A8FE /* AddListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468ED81F85D3BA0060A8FE /* AddListsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0374CD5A1DA1ACE81B09E0D6 /* Pods-ShoppingList - iCloudKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList - iCloudKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList - iCloudKit/Pods-ShoppingList - iCloudKit.release.xcconfig"; sourceTree = "<group>"; };
-		2659E4DBDC625B21571B68E2 /* Pods_ShoppingList___iCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingList___iCloudKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2659E4DBDC625B21571B68E2 /* Pods_ShoppingList___iCloudKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_ShoppingList___iCloudKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D468EBC1F85BAF30060A8FE /* ShoppingList - iCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShoppingList - iCloudKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D468EBF1F85BAF30060A8FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D468EC11F85BAF30060A8FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D468EC11F85BAF30060A8FE /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		8D468EC41F85BAF30060A8FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D468EC71F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingList___iCloudKit.xcdatamodel; sourceTree = "<group>"; };
+		8D468EC71F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ShoppingList___iCloudKit.xcdatamodel"; sourceTree = "<group>"; };
 		8D468EC91F85BAF30060A8FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D468ECC1F85BAF30060A8FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D468ECE1F85BAF30060A8FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D468ED41F85C0E90060A8FE /* ShoppingList - iCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShoppingList - iCloudKit.entitlements"; sourceTree = "<group>"; };
 		8D468ED61F85C0EB0060A8FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		8D468ED81F85D3BA0060A8FE /* AddListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListsViewController.swift; sourceTree = "<group>"; };
 		D94663A163AFAC3929118AA4 /* Pods-ShoppingList - iCloudKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList - iCloudKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList - iCloudKit/Pods-ShoppingList - iCloudKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +71,8 @@
 			children = (
 				8D468ED41F85C0E90060A8FE /* ShoppingList - iCloudKit.entitlements */,
 				8D468EBF1F85BAF30060A8FE /* AppDelegate.swift */,
-				8D468EC11F85BAF30060A8FE /* ViewController.swift */,
+				8D468EC11F85BAF30060A8FE /* ListsViewController.swift */,
+				8D468ED81F85D3BA0060A8FE /* AddListsViewController.swift */,
 				8D468EC31F85BAF30060A8FE /* Main.storyboard */,
 				8D468EC91F85BAF30060A8FE /* Assets.xcassets */,
 				8D468ECB1F85BAF30060A8FE /* LaunchScreen.storyboard */,
@@ -234,8 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D468EC21F85BAF30060A8FE /* ViewController.swift in Sources */,
+				8D468EC21F85BAF30060A8FE /* ListsViewController.swift in Sources */,
 				8D468EC81F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodeld in Sources */,
+				8D468ED91F85D3BA0060A8FE /* AddListsViewController.swift in Sources */,
 				8D468EC01F85BAF30060A8FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +437,7 @@
 				8D468EC71F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodel */,
 			);
 			currentVersion = 8D468EC71F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodel */;
-			path = ShoppingList___iCloudKit.xcdatamodeld;
+			path = "ShoppingList___iCloudKit.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
