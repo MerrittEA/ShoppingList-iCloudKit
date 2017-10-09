@@ -64,18 +64,18 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let privateDatabase = CKContainer.default().privateCloudDatabase
         
         //Initialze Query
-        let reference = CKReference(record: list.recordID, action: .deleteSelf)
+        let reference = CKReference(recordID: list.recordID, action: .deleteSelf)
         let query = CKQuery(recordType: RecordTypeItems, predicate: NSPredicate(format: "list == %@", reference))
         
         //Configure Query
-        query.sortDescripors = [NSSortDescriptor(key: "name", ascending: true)]
+        query.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         //Perform Query
         privateDatabase.perform(query, inZoneWith: nil) { (records, error) -> Void in
             DispatchQueue.main.async {
                 () -> Void in
                 // Process Response on Main THread
-                self.processResponseForQuery(records, error: error)
+                self.processResponseForQuery(records: records, error: error! as NSError)
             }
         }
     }

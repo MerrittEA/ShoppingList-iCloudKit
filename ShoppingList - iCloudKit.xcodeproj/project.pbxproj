@@ -14,10 +14,10 @@
 		8D468EC81F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EC61F85BAF30060A8FE /* ShoppingList___iCloudKit.xcdatamodeld */; };
 		8D468ECA1F85BAF30060A8FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D468EC91F85BAF30060A8FE /* Assets.xcassets */; };
 		8D468ECD1F85BAF30060A8FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D468ECB1F85BAF30060A8FE /* LaunchScreen.storyboard */; };
-		8D468ED71F85C0EB0060A8FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D468ED61F85C0EB0060A8FE /* CloudKit.framework */; };
 		8D468ED91F85D3BA0060A8FE /* AddListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468ED81F85D3BA0060A8FE /* AddListsViewController.swift */; };
 		8D468EDB1F8B338F0060A8FE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EDA1F8B338F0060A8FE /* ListViewController.swift */; };
 		8D468EDD1F8B3B940060A8FE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468EDC1F8B3B940060A8FE /* AddItemViewController.swift */; };
+		8D468EDF1F8B50B90060A8FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D468EDE1F8B50B90060A8FE /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,10 @@
 		8D468ECC1F85BAF30060A8FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D468ECE1F85BAF30060A8FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D468ED41F85C0E90060A8FE /* ShoppingList - iCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShoppingList - iCloudKit.entitlements"; sourceTree = "<group>"; };
-		8D468ED61F85C0EB0060A8FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		8D468ED81F85D3BA0060A8FE /* AddListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListsViewController.swift; sourceTree = "<group>"; };
 		8D468EDA1F8B338F0060A8FE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8D468EDC1F8B3B940060A8FE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		8D468EDE1F8B50B90060A8FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D94663A163AFAC3929118AA4 /* Pods-ShoppingList - iCloudKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList - iCloudKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList - iCloudKit/Pods-ShoppingList - iCloudKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,8 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D468ED71F85C0EB0060A8FE /* CloudKit.framework in Frameworks */,
 				5B3A30D25AFAB3AA1150DBB0 /* Pods_ShoppingList___iCloudKit.framework in Frameworks */,
+				8D468EDF1F8B50B90060A8FE /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 		8D468ED51F85C0EB0060A8FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D468ED61F85C0EB0060A8FE /* CloudKit.framework */,
+				8D468EDE1F8B50B90060A8FE /* CloudKit.framework */,
 				2659E4DBDC625B21571B68E2 /* Pods_ShoppingList___iCloudKit.framework */,
 			);
 			name = Frameworks;

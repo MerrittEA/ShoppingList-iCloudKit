@@ -65,8 +65,8 @@ class AddItemViewController: UIViewController {
         }
         
         //Configure Record
-        item?.setObject(name, forKey: "name")
-        item?.setObject(number, forKey: "number")
+        item?.setObject(name! as CKRecordValue, forKey: "name")
+        item?.setObject(number as CKRecordValue, forKey: "number")
         
         //Show Progress HUD
         SVProgressHUD.show()
@@ -79,7 +79,7 @@ class AddItemViewController: UIViewController {
                 SVProgressHUD.dismiss()
                 
                 //Process Response
-                self.processResponse(record, error: error)
+                self.processResponse(record: record, error: error as! NSError)
             }
         }
     }
@@ -97,7 +97,7 @@ class AddItemViewController: UIViewController {
         
         //Add Observer
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: "textFieldDidChange", name: UITextFieldDidCHangeNotification, object: nameTextField)
+        notificationCenter.addObserver(self, selector: Selector("textFieldDidChange"), name: NSNotification.Name.UITextFieldTextDidChange, object: nameTextField)
     }
     
     override func viewDidAppear(_ animated: Bool) {
