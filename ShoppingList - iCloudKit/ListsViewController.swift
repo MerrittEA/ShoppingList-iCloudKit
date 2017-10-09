@@ -10,6 +10,13 @@ import UIKit
 import CloudKit
 import SVProgressHUD
 
+let RecordTypeLists = "Lists"
+let RecordTypeItems = "Items"
+
+let SegueList = "List"
+let SegueListDetail = "ListDetail"
+
+
 
 class ListsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddListViewControllerDelegate {
     
@@ -20,7 +27,7 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
-    var RecordTypeLists = "Lists"
+    //var RecordTypeLists = "Lists"
     
     var lists = [CKRecord]()
     
@@ -40,7 +47,7 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-    // methods
+    // helper methods
     
         private func setupView() {
         tableView.isHidden = true
@@ -60,10 +67,10 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // Perform Query
         privateDatabase.perform(query, inZoneWith: nil) { (records, error) -> Void in
-            DispatchQueue.async(DispatchQueue.main(), { () -> Void in
+            DispatchQueue.main.async { () -> Void in
                 // Process Response on Main Thread
-                self.processResponseForQuery(records: records, error: error as! NSError)
-            })
+                self.processResponseForQuery(records: records, error: error! as NSError)
+            }
         }
     }
     
@@ -123,13 +130,13 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //Delete list
         privateDatabase.delete(withRecordID: list.recordID, completionHandler: { (recordID, error) -> Void in
-            DispatchQueue.async(DispatchQueue.main, { () -> Void in
+            DispatchQueue.main.async { () -> Void in
                 //Dismiss the Progress HUD
                 SVProgressHUD.dismiss()
                 
                 // Process the response
-                self.processResponseForDeleteRequest(list, recordID: recordID, error: error)
-            })
+                self.processResponseForDeleteRequest(record: list, recordID: recordID, error: error! as NSError)
+            }
         })
     }
     
@@ -202,7 +209,7 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         return cell
     }
-    
+    // Table view Delegte Methods
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -225,7 +232,11 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         let list = lists[indexPath.row]
         
         //delete record
-        deleteRecord(list)
+        deleteRecord(list: list)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // Segue stuff
@@ -234,6 +245,17 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
+        case SegueList:
+            //Fetch Desitination View Controller
+            let listViewController = segue.destination as! ListViewController
+            
+            //Fetch Selection
+            let list = lists[tableView.indexPathForSelectedRow!.row]
+            
+            //Configure view controller
+            listViewController.list = list
+            
+            
         case SegueListDetail:
             // Fetch Destination view controller
             let addListViewController = segue.destination as! AddListsViewController
@@ -252,7 +274,7 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
-    // Add List View Methods
+    // Add List View Controller Delegate Methods
     
     func controller(controller: AddListsViewController, didAddList list: CKRecord) {
         // Add list to lists

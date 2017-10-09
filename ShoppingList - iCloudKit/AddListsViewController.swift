@@ -43,20 +43,20 @@ class AddListsViewController: UIViewController {
         }
         
         //Configure Record
-        list?.setObject(name as! CKRecordValue, forKey: "name")
+        list?.setObject(name! as CKRecordValue, forKey: "name")
         
         //Show Progress HUD
         SVProgressHUD.show()
         
         //Saveing the Record
         privateDatabase.save(list!, completionHandler: { (record, error) -> Void in
-            DispatchQueue.async(execute: DispatchQueue.main(), { () -> Void in
+            DispatchQueue.main.async { () -> Void in
                 //Dismiss the progress indicator
                 SVProgressHUD.dismiss()
                 
                 //Process response
-                self.processResponse(record, error: error)
-            })
+                self.processResponse(record: record, error: error! as NSError)
+            }
         })
     }
     
@@ -80,7 +80,7 @@ class AddListsViewController: UIViewController {
         
         // Add Observer
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: "textFieldTextDidChange:", name: UITextFieldDidChangeNotification, object: nameTextField)
+        notificationCenter.addObserver(self, selector: Selector(("textFieldTextDidChange:")), name: NSNotification.Name.UITextFieldTextDidChange, object: nameTextField)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -128,10 +128,10 @@ class AddListsViewController: UIViewController {
         
         if !message.isEmpty {
             //Initialize alert controller
-            let alertController = UIAlertController(title: "error", message: message, preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
             
             //present the alert controller
-            presentedViewController(alertController, animated: true, completion: nil)
+            present(alertController, animated: true, completion: nil)
             
         } else {
             //notify the delegate
@@ -151,15 +151,5 @@ class AddListsViewController: UIViewController {
     func textFieldTextDidChange(notification: NSNotification) {
         updateSaveButton()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
