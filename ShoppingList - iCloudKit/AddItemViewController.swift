@@ -79,7 +79,7 @@ class AddItemViewController: UIViewController {
                 SVProgressHUD.dismiss()
                 
                 //Process Response
-                self.processResponse(record: record, error: error as! NSError)
+                self.processResponse(record: record, error: error as NSError?)
             }
         }
     }
@@ -96,8 +96,11 @@ class AddItemViewController: UIViewController {
         newItem = item == nil
         
         //Add Observer
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: Selector("textFieldDidChange"), name: NSNotification.Name.UITextFieldTextDidChange, object: nameTextField)
+        NotificationCenter.default.addObserver(self, selector: #selector(AddItemViewController.textFieldTextDidChange(notification:)), name: NSNotification.Name.UITextViewTextDidChange, object: nameTextField)
+        
+        //NotificationCenter.default.addObserver(self, selector: Selector("textFieldTextDidChange:"), name: NSNotification.Name.UITextViewTextDidChange, object: nameTextField)
+        
+        //notificationCenter.addObserver(self, selector: #selector(AddItemViewController.textFieldDidChange), name: NSNotification.Name.UITextFieldTextDidChange, object: nameTextField)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -167,7 +170,7 @@ class AddItemViewController: UIViewController {
     
     //MARK Notification Handeling
     
-    func textFieldDidChange(notification: Notification) {
+    @objc func textFieldTextDidChange(notification: Notification) {
         updateSaveButton()
     }
 }

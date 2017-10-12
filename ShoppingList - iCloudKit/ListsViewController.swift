@@ -67,9 +67,8 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // Perform Query
         privateDatabase.perform(query, inZoneWith: nil) { (records, error) -> Void in
-            DispatchQueue.main.async { () -> Void in
-                // Process Response on Main Thread
-                self.processResponseForQuery(records: records, error: error! as NSError)
+            DispatchQueue.main.async {
+                self.processResponseForQuery(records: records, error: error as NSError?)
             }
         }
     }
@@ -130,12 +129,12 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //Delete list
         privateDatabase.delete(withRecordID: list.recordID, completionHandler: { (recordID, error) -> Void in
-            DispatchQueue.main.async { () -> Void in
+            DispatchQueue.main.async {
                 //Dismiss the Progress HUD
                 SVProgressHUD.dismiss()
                 
                 // Process the response
-                self.processResponseForDeleteRequest(record: list, recordID: recordID, error: error! as NSError)
+                self.processResponseForDeleteRequest(record: list, recordID: recordID, error: error as NSError?)
             }
         })
     }

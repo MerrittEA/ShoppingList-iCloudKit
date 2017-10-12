@@ -99,6 +99,7 @@ class AddListsViewController: UIViewController {
         updateSaveButton()
     }
     
+
     private func updateNameTextField() {
         if let name = list?.object(forKey: "name") as? String {
             nameTextField.text = name
@@ -114,6 +115,8 @@ class AddListsViewController: UIViewController {
             saveButton.isEnabled = false
         }
     }
+    
+    //Helper Methods
     
     private func processResponse(record: CKRecord?, error: NSError?) {
         var message = ""
